@@ -1,6 +1,8 @@
 const express = require("express");
 const path    = require("path");
 
+const PORT = process.env.PORT || 8888;
+
 const app = express();
 
 app.get("/", (req, res) => {
@@ -15,6 +17,6 @@ app.get("/page2", (req, res) => {
   res.sendFile(path.resolve(__dirname, "public/page2.html"));
 });
 
-app.listen(8888, () => {
-  console.log(`start listening on port 8888`);
+app.listen(PORT, () => {
+  console.log(`start listening on port ${PORT}`);
 });
