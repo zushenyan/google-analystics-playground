@@ -15,7 +15,7 @@
       var page1 = document.getElementById("page1");
       var page2 = document.getElementById("page2");
 
-      page1.addEventListener(e => {
+      page1.addEventListener("click", e => {
         ga.send("send", {
           hitType: "event",
           eventCategory: "link",
@@ -25,7 +25,7 @@
         });
       });
 
-      page2.addEventListener(e => {
+      page2.addEventListener("click", e => {
         ga.send("send", {
           hitType: "event",
           eventCategory: "link",
