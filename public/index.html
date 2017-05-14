@@ -20,34 +20,8 @@
     <!-- End Google Tag Manager -->
   </head>
   <body>
-    <a href="/prepare_page1" id="page1">click me!</a>
-    <a href="/page2" id="page2">click me!</a>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        var page1 = document.getElementById("page1");
-        var page2 = document.getElementById("page2");
-
-        page1.addEventListener("click", e => {
-          ga("send", {
-            hitType: "event",
-            eventCategory: "link",
-            eventAction: "redirect",
-            eventLabel: "index link",
-            eventValue: 1
-          });
-        });
-
-        page2.addEventListener("click", e => {
-          ga("send", {
-            hitType: "event",
-            eventCategory: "link",
-            eventAction: "redirect",
-            eventLabel: "index link",
-            eventValue: 2
-          });
-        });
-      });
-    </script>
+    <a href="/prepare_page1" id="page1">to page 1</a>
+    <a href="/page2" id="page2">to page 2</a>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TG89TJQ"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
