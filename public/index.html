@@ -11,9 +11,33 @@
       ga('create', 'UA-28727173-2', 'auto');
       ga('send', 'pageview');
     </script>
+    <script>
+      var page1 = document.getElementById("page1");
+      var page2 = document.getElementById("page2");
+
+      page1.addEventListener(e => {
+        ga.send("send", {
+          hitType: "event",
+          eventCategory: "link",
+          eventAction: "redirect",
+          eventLabel: "index link",
+          eventValue: 1
+        });
+      });
+
+      page2.addEventListener(e => {
+        ga.send("send", {
+          hitType: "event",
+          eventCategory: "link",
+          eventAction: "redirect",
+          eventLabel: "index link",
+          eventValue: 2
+        });
+      });
+    </script>
   </head>
   <body>
-    <a href="/page1">click me!</a>
-    <a href="/page2">click me!</a>
+    <a href="/page1" id="page1">click me!</a>
+    <a href="/page2" id="page2">click me!</a>
   </body>
 </html>
