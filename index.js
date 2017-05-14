@@ -9,6 +9,10 @@ app.get("/", (req, res) => {
   res.sendFile(path.resolve(__dirname, "public/index.html"));
 });
 
+app.get("/prepare_page1", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "public/prepare_page1.html"));
+});
+
 app.get("/page1", (req, res) => {
   const { v } = req.query;
   if(v === "1") {
