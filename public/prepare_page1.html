@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>page 1</title>
+    <script src="//www.google-analytics.com/cx/api.js?experiment=8sHUA1DWRgSwh9zzYM_cXw"></script>
+    <script>
+      var version = cxApi.chooseVariation();
+      var id = Math.floor(Math.random() * 10000 + 1);
+      if(version === 1){
+        location.href = `/page1?v=${version}&id=${id}`;
+      }
+      else{
+        location.href = `/page1?id=${id}`;
+      }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
