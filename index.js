@@ -10,7 +10,13 @@ app.get("/", (req, res) => {
 });
 
 app.get("/page1", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "public/page1.html"));
+  const { v } = req.query;
+  if(v === "1") {
+    res.sendFile(path.resolve(__dirname, "public/page1_b.html"));
+  }
+  else {
+    res.sendFile(path.resolve(__dirname, "public/page1.html"));
+  }
 });
 
 app.get("/page2", (req, res) => {
