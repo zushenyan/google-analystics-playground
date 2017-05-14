@@ -16,26 +16,28 @@
     <a href="/page1" id="page1">click me!</a>
     <a href="/page2" id="page2">click me!</a>
     <script>
-      var page1 = document.getElementById("page1");
-      var page2 = document.getElementById("page2");
+      document.addEventListener("DOMContentLoaded", () => {
+        var page1 = document.getElementById("page1");
+        var page2 = document.getElementById("page2");
 
-      page1.addEventListener("click", e => {
-        ga.send("send", {
-          hitType: "event",
-          eventCategory: "link",
-          eventAction: "redirect",
-          eventLabel: "index link",
-          eventValue: 1
+        page1.addEventListener("click", e => {
+          ga("send", {
+            hitType: "event",
+            eventCategory: "link",
+            eventAction: "redirect",
+            eventLabel: "index link",
+            eventValue: 1
+          });
         });
-      });
 
-      page2.addEventListener("click", e => {
-        ga.send("send", {
-          hitType: "event",
-          eventCategory: "link",
-          eventAction: "redirect",
-          eventLabel: "index link",
-          eventValue: 2
+        page2.addEventListener("click", e => {
+          ga("send", {
+            hitType: "event",
+            eventCategory: "link",
+            eventAction: "redirect",
+            eventLabel: "index link",
+            eventValue: 2
+          });
         });
       });
     </script>
