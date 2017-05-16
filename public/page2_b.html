@@ -2,11 +2,7 @@
 
 <html>
   <head>
-    <title>page 1</title>
-    <script src="//www.google-analytics.com/cx/api.js?experiment=N8BMpwBpSPKkOfnC4phN5A"></script>
-    <script>
-      var version = cxApi.chooseVariation();
-    </script>
+    <title>page 2</title>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -15,16 +11,8 @@
       ga('create', 'UA-28727173-2', 'auto');
       ga('send', 'pageview');
     </script>
-    <script>
-      var id = Math.floor(Math.random() * 10000 + 1);
-      if(version === 1){
-        location.href = `/page1?v=${version}&id=${id}`;
-      }
-      else{
-        location.href = `/page1?id=${id}`;
-      }
-    </script>
   </head>
   <body>
+    <h1>I am page 2 BBBB</h1>
   </body>
 </html>

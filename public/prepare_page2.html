@@ -2,7 +2,11 @@
 
 <html>
   <head>
-    <title>index</title>
+    <title>page 2</title>
+    <script src="//www.google-analytics.com/cx/api.js?experiment=GM0v-HeIQbSlfjmnK--bDA"></script>
+    <script>
+      var version = cxApi.chooseVariation();
+    </script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -10,13 +14,16 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-TG89TJQ');</script>
     <!-- End Google Tag Manager -->
+    <script>
+      var id = Math.floor(Math.random() * 10000 + 1);
+      if(version === 1){
+        location.href = `/page2?v=${version}&id=${id}`;
+      }
+      else{
+        location.href = `/page2?id=${id}`;
+      }
+    </script>
   </head>
   <body>
-    <a href="/prepare_page1" id="page1">page 1</a>
-    <a href="/prepare_page2" id="page2">page 2</a>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TG89TJQ"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
   </body>
 </html>

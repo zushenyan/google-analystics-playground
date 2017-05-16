@@ -13,6 +13,10 @@ app.get("/prepare_page1", (req, res) => {
   res.sendFile(path.resolve(__dirname, "public/prepare_page1.html"));
 });
 
+app.get("/prepare_page2", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "public/prepare_page2.html"));
+});
+
 app.get("/page1", (req, res) => {
   const { v } = req.query;
   if(v === "1") {
@@ -24,7 +28,13 @@ app.get("/page1", (req, res) => {
 });
 
 app.get("/page2", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "public/page2.html"));
+  const { v } = req.query;
+  if(v === "1") {
+    res.sendFile(path.resolve(__dirname, "public/page2_b.html"));
+  }
+  else {
+    res.sendFile(path.resolve(__dirname, "public/page2.html"));
+  }
 });
 
 app.listen(PORT, () => {
