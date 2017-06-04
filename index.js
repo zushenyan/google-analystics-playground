@@ -37,6 +37,16 @@ app.get("/page2", (req, res) => {
   }
 });
 
+app.get("/page3", (req, res) => {
+  const { v } = req.query;
+  if(v === "1") {
+    res.sendFile(path.resolve(__dirname, "public/page3_b.html"));
+  }
+  else {
+    res.sendFile(path.resolve(__dirname, "public/page3.html"));
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`start listening on port ${PORT}`);
 });
