@@ -47,6 +47,10 @@ app.get("/page3", (req, res) => {
   }
 });
 
+app.get("/page4", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "public/page4.html"));
+})
+
 app.listen(PORT, () => {
   console.log(`start listening on port ${PORT}`);
 });
