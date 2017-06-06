@@ -2,7 +2,7 @@ const express = require("express");
 const path    = require("path");
 
 const PORT = process.env.PORT || 8888;
-const ENV = "PRO";
+const ENV = "DEV";
 
 const app = express();
 app.set("views", path.resolve(__dirname, "./public"))
