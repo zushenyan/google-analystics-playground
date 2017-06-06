@@ -2,7 +2,7 @@ const express = require("express");
 const path    = require("path");
 
 const PORT = process.env.PORT || 8888;
-const ENV = "DEV";
+const ENV = "PRO";
 
 const app = express();
 app.set("views", path.resolve(__dirname, "./public"))
@@ -52,7 +52,6 @@ app.get("/page3", (req, res) => {
 
 app.get("/page4", (req, res) => {
   res.render("page4", { env: ENV });
-  // res.sendFile(path.resolve(__dirname, "public/page4.html"));
 })
 
 app.listen(PORT, () => {
